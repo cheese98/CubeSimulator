@@ -14,11 +14,11 @@ class Table():
     
     def add_option(self, line, name, rate):
         if name:
-            self.opt[line][name] = rate
+            self.opt[line][name] = round(float(rate.replace('%', '')), 4)
     
 
 def get_html():
-    url = "https://maplestory.nexon.com/Guide/OtherProbability/cube/addi"
+    url = "https://maplestory.nexon.com/Guide/OtherProbability/cube/red"
     response = requests.get(url)
     if response.status_code == 200:
         html = response.text
@@ -60,7 +60,7 @@ def save_json(datas):
         }
         lyst.append(dict)
 
-    with open("addi_cube.json", "w", encoding="UTF-8") as json_file:
+    with open("red_cube.json", "w", encoding="UTF-8") as json_file:
         json.dump(lyst, json_file, ensure_ascii=False)
 
 if __name__ == "__main__":
