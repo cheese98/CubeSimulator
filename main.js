@@ -34,7 +34,7 @@ function roll(table){
 function evaluate_option(res){
     // 유효한 값이면 true, 유효하지 않은 값이면 false
     let counts = [0, 0, 0, 0, 0, 0, 0, 0];
-    let options = ["모든 스킬레벨", "피격 후 무적시간", "몬스터 방어율 무시", "확률로 데미지의", "초간 무적", "보스 몬스터 공격", "아이템 드롭률"];
+    let options = ["스킬레벨", "피격 후 무적시간", "몬스터 방어율 무시", "확률로 데미지의", "초간 무적", "보스 몬스터 공격", "아이템 드롭률"];
 
     for(let line of res){
         for(let i=0; i<7; i++){
